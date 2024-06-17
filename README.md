@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este gateway SMS integra o Perfex CRM com a API Evolution para enviar notificações via WhatsApp. 
+Este gateway SMS integra o [PerfexCRM](https://www.perfexcrm.com/) com a [Evolution API](https://evolution-api.com/) para enviar notificações via WhatsApp. 
 
 **Para utilizar este gateway, é necessário ter acesso à API Evolution. Caso não possua uma instância da API ou prefira uma solução como serviço, entre em contato comigo. [Chamar no whatspp](https://wa.me/5531998913498)** 
 
@@ -31,3 +31,7 @@ Este gateway SMS integra o Perfex CRM com a API Evolution para enviar notificaç
 ## API Evolution
 
 Para mais informações sobre a API Evolution e como obtê-la, visite [Evolution API](https://evolution-api.com/)
+
+## PerfexCRM
+
+Para mais informações sobre a PerfexCRM e como obtê-la, visite [PerfexCRM](https://www.perfexcrm.com/)
