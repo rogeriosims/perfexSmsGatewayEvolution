@@ -1,2 +1,33 @@
-# perfexSmsGatewayEvolution
-Gateway SMS para Perfex CRM utilizando a API Evolution.
+# Gateway SMS para Perfex CRM utilizando a API Evolution. - PerfexSmsGatewayEvolution
+
+## Descrição
+
+Este gateway SMS integra o Perfex CRM com a API Evolution para enviar notificações via WhatsApp. 
+
+**Para utilizar este gateway, é necessário ter acesso à API Evolution. Caso não possua uma instância da API ou prefira uma solução como serviço, entre em contato comigo. [Chamar no whatspp](https://wa.me/5531998913498)** 
+
+
+### Funcionalidades
+
+- Envio de mensagens de texto via WhatsApp.
+- Integração direta com a API Evolution para entrega rápida e confiável.
+
+### Instalação
+
+1. **Baixe e salve o arquivo `Sms_evolution.php` na pasta `application\libraries\sms\` do seu projeto Perfex CRM.**
+
+2. **Inclua a biblioteca no arquivo `application\helpers\sms_helper.php`:**
+
+   Abra o arquivo `application\helpers\sms_helper.php` e adicione a linha abaixo dentro da função `app_init_sms_gateways()`:
+
+   ```php
+   $gateways = [
+       'sms/sms_clickatell',
+       'sms/sms_msg91',
+       'sms/sms_twilio',
+       'sms/sms_evolution'  // Adicione esta linha para incluir o gateway SMS Evolution
+   ];
+
+## API Evolution
+
+Para mais informações sobre a API Evolution e como obtê-la, visite [Evolution API](https://evolution-api.com/)
