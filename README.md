@@ -27,6 +27,10 @@ Este gateway SMS integra o [PerfexCRM](https://www.perfexcrm.com/) com a [Evolut
        'sms/sms_twilio',
        'sms/sms_evolution'  // Adicione esta linha para incluir o gateway SMS Evolution
    ];
+ 
+ 2. **Configure o gateway sms**
+    acesse: admin/settings?group=sms e preencha as credenciais.
+   
 
 ## API Evolution
 
