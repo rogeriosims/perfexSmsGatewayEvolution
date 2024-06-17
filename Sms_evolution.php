@@ -6,6 +6,7 @@ class Sms_evolution extends App_sms
 {
     private $api_key;
     private $api_url;
+    private $api_instance;
 
     public function __construct()
     {
@@ -13,6 +14,7 @@ class Sms_evolution extends App_sms
 
         $this->api_key = $this->get_option('evolution', 'api_key');
         $this->api_url = $this->get_option('evolution', 'api_url');
+        $this->api_instance = $this->get_option('evolution', 'api_instance');
 
         $this->add_gateway('evolution', [
             'info'  => '<p>Faz o envio de notificações via WhatsApp usando a API Evolution. </br></br>
@@ -23,22 +25,29 @@ class Sms_evolution extends App_sms
             'name'    => 'Evolution Api Whatspp',
             'options' => [
                 [
+                    'name'  => 'api_url',
+                    'label' => 'API URL',
+                    'info'  => '<p>Insira a URL de sua API. Exemplo: http://evolutionapi.com.br</p>'
+                ], 
+                [
+                    'name'  => 'api_instance',
+                    'label' => 'Nome da instância',
+                    'info'  => '<p>Insira o nome da sua instância.</p>'
+                ],        
+                [
                     'name'  => 'api_key',
                     'label' => 'API Key',
                     'info'  => '<p>Insira a chave de API da sua instância.</p>'
                 ],
-                [
-                    'name'  => 'api_url',
-                    'label' => 'API URL',
-                    'info'  => '<p>Insira a URL de sua API.</p>'
-                ],                
             ],
         ]);
     }
 
     public function send($number, $message)
     {
-        $response = $this->client->request('POST', $this->api_url, [
+        $url = $this->api_url . "/message/sendText/" . $this->api_instance;
+        
+        $response = $this->client->request('POST', $url, [
             'headers' => [
                 'Content-Type' => 'application/json',
                 'apikey' => $this->api_key,
