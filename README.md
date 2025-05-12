@@ -6,6 +6,9 @@ Este gateway SMS integra o [PerfexCRM](https://www.perfexcrm.com/) com a [Evolut
 
 **Para utilizar este gateway, é necessário ter acesso à API Evolution. Caso não possua uma instância da API ou prefira uma solução como serviço, entre em contato comigo. [Chamar no whatspp](https://wa.me/5531998913498)** 
 
+## ATENÇÃO
+
+** O plugin desse repositório só é compative com a v1 da evolution **
 
 ### Funcionalidades
 
